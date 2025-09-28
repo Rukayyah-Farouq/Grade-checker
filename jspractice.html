@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker</title>
+</head>
+<body>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1f2937;
+            line-height: 40px;
+            color: white;
+        }
+        .wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 1px 10px 50px rgba(220, 220, 220, 0.478);
+            border-radius: 10px;
+            margin: 20px;
+            width: 40vw;
+            height: 90vh;
+        }
+        .table thead, th, td{
+            text-align: center;
+            border: 2px solid #4b5563;
+            width: 100px;
+        }
+        p{
+            font-size: 30px;
+            box-shadow: 2px 3px 10px rgb(0, 57, 243);
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            color: blue;
+            width: 80%;
+            text-align: center;
+        }
+        #btn{
+            background-color: #2563eb;
+            border-radius: 8px;
+            border: none;
+            font-size: larger;
+            color: white;
+        }
+        #btn:hover{
+            background-color: #4b5563;
+            transition: all 0.15s ease;
+        }
+
+    </style>
+    <div class="wrap">
+        <h1>Grade Checker</h1>
+    <table>
+        <thead>
+            <th>Score</th>
+            <th>Grade</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>90 - 100</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>80 - 89</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>70 - 79</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>60- 69</td>
+                <td>D</td>
+            </tr>
+           
+            <tr>
+                <td>less than 60</td>
+                <td>F</td>
+            </tr>  
+        </tbody>
+    </table>
+    <div>
+        <label for="score">Score:</label>
+    <input type="text" id="score" placeholder="Enter your score">
+    <button id="btn" onclick="check(document.getElementById('score').value)">Enter</button>
+    </div>
+    
+    <p id="text">Your Grade</p>
+    </div>
+    
+    <script>
+        let score = document.getElementById('score')
+        function check(score){
+            if (score <= 100 || score >= 90){
+                document.getElementById('score').value = ''
+                document.getElementById('text').innerHTML = 'Your grade is A'
+                document.getElementById('text').style.color = 'green'
+            }
+            if (score === 89 || score <= 89 ){
+                document.getElementById('score').value = ''
+                document.getElementById('text').innerHTML = 'Your grade is B'
+                document.getElementById('text').style.color = 'blue'
+            }
+            if (score === 70 || score <= 79 ){
+                document.getElementById('score').value = ''
+                document.getElementById('text').innerHTML = 'Your grade is C'
+                document.getElementById('text').style.color = 'darkorange'
+            }
+            if (score === 60 || score <= 69 ){
+                document.getElementById('score').value = ''
+                document.getElementById('text').innerHTML = 'Your grade is D'
+                document.getElementById('text').style.color = 'yellow'
+            }
+            if (score < 60 ){
+                document.getElementById('score').value = ''
+                document.getElementById('text').innerHTML = 'Your grade is F'
+                document.getElementById('text').style.color = 'red'
+            }
+            if (score > 100 || score < 0 || score === ''){
+                document.getElementById('score').value = ''
+                document.getElementById('text').innerHTML = 'It has to be between 0-100'
+                document.getElementById('text').style.color = 'red'
+        }
+    }
+    </script>
+</body>
+</html>
