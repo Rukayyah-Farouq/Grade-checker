@@ -115,13 +115,13 @@ button:hover{
 }
 .third-body{
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background-image: url(./group-afro-americans-working-together.jpg);
     background-size: cover;
 }
 .third-text{
     background-color: rgba(0, 0, 0, 0.6);
-    height: 100vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,4 +133,72 @@ button:hover{
     background: linear-gradient(60deg,#0d1b2a, rgb(127, 127, 244));
     height: 10px;
     width: 100%;
+}
+.grids{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: end;
+    justify-content: end;
+    position:relative;
+    top: 10cm;
+}
+.layout1, .layout2, .layout3{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 20vw;
+    height: 30vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 3px 4px 10px rgb(16, 16, 16);
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.layout2{
+    background-color: rgb(128, 143, 241);
+}
+.layout1 p{
+    font-size: 20px;
+    font-weight: 900;
+}
+.layout3 p{
+    font-size: 20px;
+    font-weight: 900;
+}
+.layout2 p{
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+}
+.layout1 i{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(128, 143, 241);
+    border-radius: 60px;
+    width: 100px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+.layout3 i{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(128, 143, 241);
+    border-radius: 60px;
+    width: 100px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+.layout2 i{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    border-radius: 60px;
+    width: 100px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
 }
